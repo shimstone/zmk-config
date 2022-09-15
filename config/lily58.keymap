@@ -54,7 +54,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_LEFT_CTRL";
             #binding-cells = <2>;
-            tapping-term-ms = <182>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>, <&kp>;
@@ -137,7 +137,7 @@
     &reset      &trans          &trans          &trans          &trans          &trans                                  &trans      &trans                  &kp C_VOLUME_DOWN       &kp C_VOLUME_UP         &kp C_MUTE              &kp TILDE
     &kp GRAVE   &kp LC(UP)      &mkp LCLK       &kp UP          &mkp RCLK       &mwh SCROLL_VERT(30)                    &kp N6      &kp N7                  &mmv MOVE_VERT(-2000)   &kp N9                  &kp N0                  &trans
     &kp F1      &hmlc LCTRL F7  &kp LEFT        &kp DOWN        &kp RIGHT       &mwh SCROLL_VERT(-30)                   &trans      &mmv MOVE_HOR(-2000)    &mmv MOVE_VERT(2000)    &mmv MOVE_HOR(2000)     &mmv MOVE_VERT(-2000)   &kp N9               
-    &kp F7      &kp LC(LEFT)    &kp LC(RIGHT)   &kp LG(LBKT)    &kp LG(RBKT)    &kp F12         &trans      &trans      &kp KP_PLUS &kp MINUS               &kp EQUAL               &trans                  &trans                  &trans          
+    &kp F7      &kp LC(LEFT)    &kp LC(RIGHT)   &kp LG(LBKT)    &kp LG(RBKT)    &kp F12         &trans      &trans      &kp KP_PLUS &kp MINUS               &kp EQUAL               &trans                  &trans                  &kp BSLH          
                                                 &trans          &trans          &trans          &trans      &trans      &trans      &kp DEL                 &trans                         
 >;
 
@@ -156,7 +156,7 @@
     &kp F1          &kp F2          &kp F3          &kp UP              &kp F5              &kp F6                                  &kp LG(LA(LBKT))        &kp F8      &kp F9              &kp F10                 &kp F11                 &kp F12 
     &kp GRAVE       &kp EXCL        &kp LEFT        &kp DOWN            &kp RIGHT           &kp LG(LC(UP))                          &kp LG(LA(RBKT))        &kp AMPS    &kp KP_MULTIPLY     &kp LPAR                &kp RPAR                &kp TILDE   
     &trans          &trans          &trans          &kp LG(LC(LEFT))    &kp LG(LC(RIGHT))   &kp LG(LC(DOWN))    &trans  &trans      &trans                  &kp MINUS   &kp KP_PLUS         &kp LBRC                &kp RBRC                &kp PIPE    
-                                                    &trans              &trans              &trans              &trans  &trans      &trans                  &trans      &trans
+                                                    &trans              &trans              &trans              &trans  &trans      &trans                  &trans      &kp LANG1
                                                   >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -171,9 +171,9 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &trans    &trans &trans &trans  &trans  &trans                       &trans      &trans    &trans    &trans   &trans    &trans
-&kp GRAVE &kp N1 &kp N2 &kp N3  &kp N4  &kp N5                       &kp N6      &kp N7    &kp N8    &kp N9   &kp N0    &trans
-&kp F1    &kp F2 &kp F3 &kp F4  &kp F5  &kp F6                       &trans      &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT &trans
-&kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
+&kp GRAVE &trans &kp N7 &kp N8  &kp N9  &trans                       &kp F1      &kp F2    &kp F3    &kp F4   &kp F5    &kp F6
+&kp F1    &trans &kp N4 &kp N5  &kp N6  &trans                       &kp F7      &kp F8    &kp F9    &kp F10  &kp F11   &kp F12
+&kp F7    &kp N0 &kp N1 &kp N2  &kp N3  &trans    &trans   &trans    &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT  &kp BSLH
                         &trans  &trans  &trans    &trans   &trans    &trans      &trans    &trans          
             >;
 
