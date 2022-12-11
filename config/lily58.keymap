@@ -137,7 +137,7 @@
     &reset      &trans          &kp C_MUTE      &kp C_VOLUME_DOWN       &kp C_VOLUME_UP        &trans                                  &trans      &trans         &trans          &trans                 &trans              &kp TILDE
     &kp GRAVE   &kp LC(UP)      &mkp LCLK       &kp UP          &mkp RCLK       &mwh SCROLL_VERT(30)                    &kp N6      &kp N7                  &mmv MOVE_VERT(-2000)   &kp N9                  &kp N0                  &trans
     &kp F12     &hmlc LCTRL F7  &kp LEFT        &kp DOWN        &kp RIGHT       &mwh SCROLL_VERT(-30)                   &trans      &mmv MOVE_HOR(-2000)    &mmv MOVE_VERT(2000)    &mmv MOVE_HOR(2000)     &mmv MOVE_VERT(-2000)   &kp N9               
-    &kp F11     &kp LC(LEFT)    &kp LC(RIGHT)   &kp LG(LC(F11)) &kp LG(LC(F12)) &kp F12         &trans      &trans      &kp KP_PLUS &kp MINUS               &kp EQUAL               &trans                  &trans                  &kp BSLH          
+    &kp F11     &kp LC(LEFT)    &kp LC(RIGHT)   &kp LG(LC(LEFT)) &kp LG(LC(RIGHT)) &kp F12         &trans      &trans      &kp KP_PLUS &kp MINUS               &kp EQUAL               &trans                  &trans                  &kp BSLH          
                                                 &trans          &trans          &trans          &trans      &trans      &trans      &kp DEL                 &trans                         
 >;
 
