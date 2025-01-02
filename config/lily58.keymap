@@ -16,7 +16,6 @@
     behaviors_left_shift {
         hmls: homerow_mods_left_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FOR_LEFT_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
@@ -28,7 +27,6 @@
     behaviors_right_shift {
         hmrs: homerow_mods_right_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FOR_RIGHT_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <140>;
             quick_tap_ms = <0>;
@@ -37,10 +35,9 @@
         };
     };
 
-    behaviors_homerow { 
+    behaviors_homerow_left_cmd { 
         hmlc: homerow_mods_left_cmd {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FOR_LEFT_CMD";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             quick_tap_ms = <0>;
@@ -52,19 +49,15 @@
     behaviors_homerow { 
         hmlct: homerow_mods_left_ctrl {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FOR_LEFT_CTRL";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>, <&kp>;
         };
-    };
 
-    behaviors_homerow { 
         hmo: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_FOR_OTHER";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick_tap_ms = <0>;
@@ -76,7 +69,6 @@
     behaviors_caps_lock { 
         cmo: capslock_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "CAPS_LOCK_FOR_TAB";
             #binding-cells = <2>;
             tapping-term-ms = <130>;
             quick_tap_ms = <0>;
@@ -134,7 +126,7 @@
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
                                                 
-    &reset      &trans          &kp C_MUTE      &kp C_VOLUME_DOWN       &kp C_VOLUME_UP        &trans                                  &trans      &trans         &trans          &trans                 &trans              &kp TILDE
+    &sys_reset      &trans          &kp C_MUTE      &kp C_VOLUME_DOWN       &kp C_VOLUME_UP        &kp C_BRIGHTNESS_MAXIMUM                                  &trans      &trans         &trans          &trans                 &trans              &kp TILDE
     &kp GRAVE   &kp LC(UP)      &mkp LCLK       &kp UP          &mkp RCLK       &mwh SCROLL_VERT(30)                    &kp N6      &kp N7                  &mmv MOVE_VERT(-2000)   &kp N9                  &kp N0                  &trans
     &kp F12     &hmlc LCTRL F7  &kp LEFT        &kp DOWN        &kp RIGHT       &mwh SCROLL_VERT(-30)                   &trans      &mmv MOVE_HOR(-2000)    &mmv MOVE_VERT(2000)    &mmv MOVE_HOR(2000)     &mmv MOVE_VERT(-2000)   &kp N9               
     &kp F11     &kp LC(LEFT)    &kp LC(RIGHT)   &kp LG(LC(F11)) &kp LG(LC(F12)) &kp F12         &trans      &trans      &kp KP_PLUS &kp MINUS               &kp EQUAL               &trans                  &trans                  &kp BSLH          
@@ -152,10 +144,10 @@
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-    &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3        &bt BT_SEL 4                            &trans                  &trans      &ext_power EP_ON    &ext_power EP_OFF       &ext_power EP_TOG       &reset  
+    &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3        &bt BT_SEL 4                            &trans                  &trans      &ext_power EP_ON    &ext_power EP_OFF       &ext_power EP_TOG       &sys_reset  
     &kp F1          &kp F2          &kp F3          &kp UP              &kp F5              &kp F6                                  &kp LG(LA(LBKT))        &kp F8      &kp F9              &kp F10                 &kp F11                 &kp F12 
     &kp GRAVE       &kp EXCL        &kp LEFT        &kp DOWN            &kp RIGHT           &kp LG(LC(UP))                          &kp LG(LA(RBKT))        &kp AMPS    &kp KP_MULTIPLY     &kp LPAR                &kp RPAR                &kp TILDE   
-    &trans          &trans          &trans          &trans              &trans              &kp LG(LC(DOWN))    &trans  &trans      &trans                  &kp MINUS   &kp KP_PLUS         &kp LBRC                &kp RBRC                &kp PIPE    
+    &studio_unlock  &trans          &trans          &trans              &trans              &kp LG(LC(DOWN))    &trans  &trans      &trans                  &kp MINUS   &kp KP_PLUS         &kp LBRC                &kp RBRC                &kp PIPE    
                                                     &trans              &trans              &trans              &trans  &trans      &trans                  &trans      &kp LANG1
                                                   >;
 
