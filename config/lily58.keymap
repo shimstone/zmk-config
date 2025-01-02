@@ -9,8 +9,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -84,7 +82,7 @@
 &kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                            &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
 &kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z         &kp X        &kp C         &kp V           &kp B      &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
-                                      &kp LALT      &kp LGUI        &kp SPACE  &mo 2       &mo 1     &kp ENTER  &kp BSPC             &kp RGUI
+                                      &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
