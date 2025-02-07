@@ -119,6 +119,16 @@
             key-positions = <39 40>;
             timeout-ms = <100>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 14>;
+        };
+
+        shiftTab {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <14 15>;
+        };
     };
 
     keymap {
