@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -68,6 +67,49 @@
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
         };
+
+        Copy: Copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "COPY";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LG(C)>;
+
+            tapping-term-ms = <150>;
+        };
+
+        Paste: Paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LG(V)>;
+
+            tapping-term-ms = <150>;
+        };
+
+        Convert_langauge: Convert_langauge {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CONVERT_LANGAUGE";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp LC(SPACE)>;
+
+            tapping-term-ms = <150>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <38 39>;
+            timeout-ms = <100>;
+        };
+
+        Paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <39 40>;
+            timeout-ms = <100>;
+        };
     };
 
     keymap {
@@ -101,7 +143,7 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans          &trans          &trans           &trans     &trans
+&trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans          &trans          &trans           &trans     &studio_unlock
 &kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc SCRL_UP                            &kp N6       &kp N7          &mmv MOVE_UP    &kp N9           &kp N0     &trans
 &kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc SCRL_DOWN                          &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RIGHT  &trans
 &kp F7     &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
@@ -120,11 +162,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                                                 &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
+&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&trans      &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
