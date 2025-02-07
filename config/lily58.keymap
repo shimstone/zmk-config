@@ -24,7 +24,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
         };
@@ -35,7 +35,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
         };
@@ -46,7 +46,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
         };
@@ -57,7 +57,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             hold-trigger-key-positions = <25>;
             flavor = "balanced";
         };
@@ -68,7 +68,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
         };
