@@ -19,7 +19,7 @@
         hmls: homerow_mods_left_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow_mods_left_shift";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&search>;
 
             #binding-cells = <2>;
             tapping-term-ms = <130>;
@@ -47,7 +47,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <129>;
+            tapping-term-ms = <130>;
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
             quick-tap-ms = <80>;
@@ -71,10 +71,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <110>;
             flavor = "balanced";
-            hold-trigger-key-positions = <25 34>;
-            quick-tap-ms = <80>;
+            hold-trigger-key-positions = <25 34 26>;
+            quick-tap-ms = <60>;
         };
 
         Copy: Copy {
@@ -156,6 +156,15 @@
 
             tapping-term-ms = <220>;
         };
+
+        search: search {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SEARCH";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp LG(F)>;
+
+            tapping-term-ms = <220>;
+        };
     };
 
     combos {
@@ -208,12 +217,17 @@
 
         select_all {
             bindings = <&kp LG(A)>;
-            key-positions = <27 25>;
+            key-positions = <25 26>;
         };
 
         new_tab {
             bindings = <&kp LG(T)>;
             key-positions = <27 17>;
+        };
+
+        fullScreen {
+            bindings = <&kp LG(LC(F))>;
+            key-positions = <25 27 28>;
         };
     };
 
