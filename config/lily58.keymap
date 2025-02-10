@@ -12,13 +12,15 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mmv {
-    time-to-max-speed-ms = <1500>;
+    time-to-max-speed-ms = <20>;
     acceleration-exponent = <4>;
+    trigger-period-ms = <50>;
 };
 
 &msc {
     acceleration-exponent = <4>;
-    time-to-max-speed-ms = <1200>;
+    time-to-max-speed-ms = <20>;
+    trigger-period-ms = <20>;
 };
 
 / {
