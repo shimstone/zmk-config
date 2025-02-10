@@ -13,7 +13,7 @@
 
 &mmv {
     time-to-max-speed-ms = <1500>;
-    acceleration-exponent = <2>;
+    acceleration-exponent = <4>;
 };
 
 / {
@@ -95,9 +95,9 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CONVERT_LANGAUGE";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&kp LC(SPACE)>;
+            bindings = <&mo 1>, <&kp LC(SPACE)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <220>;
         };
 
         num_f_1: num_f_1 {
@@ -114,6 +114,23 @@
             label = "ALL_SEARCH";
             #binding-cells = <0>;
             bindings = <&kp G>, <&kp LS(LG(F))>;
+
+            tapping-term-ms = <220>;
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UNDO";
+            #binding-cells = <0>;
+            tapping-term-ms = <220>;
+            bindings = <&kp Z>, <&kp LG(Z)>;
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "REDO";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp LG(LS(Z))>;
 
             tapping-term-ms = <220>;
         };
@@ -157,11 +174,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1             &kp N2       &kp N3        &kp N4          &kp N5                             &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
-&kp TAB    &kp Q              &kp W        &kp E         &kp R           &kp T                              &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
-&kp LCTRL  &hmo LCTRL A       &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &all_search                        &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT  &Convert_langauge  &kp X        &Copy         &Paste          &kp B        &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
-                                           &kp LALT      &kp LGUI        &kp SPACE    &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
+&kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                                      &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
+&kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                                       &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
+&kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &all_search                                 &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT  &undo         &redo        &Copy         &Paste          &kp B        &kp LBKT             &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
+                                      &kp LALT      &kp LGUI        &kp SPACE    &Convert_langauge    &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
