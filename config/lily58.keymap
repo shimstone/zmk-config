@@ -22,7 +22,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
             quick-tap-ms = <80>;
@@ -35,7 +35,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
             quick-tap-ms = <80>;
@@ -47,7 +47,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <120>;
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
             quick-tap-ms = <80>;
@@ -59,9 +59,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <120>;
             hold-trigger-key-positions = <25>;
             flavor = "balanced";
+            quick-tap-ms = <80>;
         };
 
         hmo: homerow_mods {
@@ -70,7 +71,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
             quick-tap-ms = <80>;
@@ -194,6 +195,26 @@
             bindings = <&kp LG(BACKSPACE)>;
             key-positions = <27 56>;
         };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <27 37>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <27 28 37>;
+        };
+
+        select_all {
+            bindings = <&kp LG(A)>;
+            key-positions = <27 25>;
+        };
+
+        new_tab {
+            bindings = <&kp LG(T)>;
+            key-positions = <27 17>;
+        };
     };
 
     keymap {
@@ -211,7 +232,7 @@
 &kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                                      &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
 &kp TAB    &tab          &shiftTab    &kp E         &kp R           &kp T                                       &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
 &kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &all_search                                 &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT  &undo         &redo        &Copy         &Paste          &kp B        &kp LBKT             &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
+&kp LSHFT  &kp Z         &kp X        &Copy         &Paste          &kp B        &kp LBKT             &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
                                       &kp LALT      &kp LGUI        &kp SPACE    &Convert_langauge    &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
