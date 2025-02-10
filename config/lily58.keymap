@@ -180,11 +180,6 @@
             key-positions = <50 51 52>;
         };
 
-        right_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <56 55 57>;
-        };
-
         left_reset {
             bindings = <&sys_reset>;
             key-positions = <51 50>;
@@ -227,7 +222,17 @@
 
         fullScreen {
             bindings = <&kp LG(LC(F))>;
-            key-positions = <25 27 28>;
+            key-positions = <28 29>;
+        };
+
+        command-line {
+            bindings = <&kp LG(L)>;
+            key-positions = <27 33>;
+        };
+
+        indent {
+            bindings = <&kp LC(I)>;
+            key-positions = <25 20>;
         };
     };
 
