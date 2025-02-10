@@ -16,6 +16,11 @@
     acceleration-exponent = <4>;
 };
 
+&msc {
+    acceleration-exponent = <4>;
+    time-to-max-speed-ms = <1200>;
+};
+
 / {
     behaviors {
         hmls: homerow_mods_left_shift {
@@ -138,18 +143,6 @@
 
     combos {
         compatible = "zmk,combos";
-
-        Copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <38 39>;
-            timeout-ms = <100>;
-        };
-
-        Paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <39 40>;
-            timeout-ms = <100>;
-        };
 
         tab {
             bindings = <&kp TAB>;
