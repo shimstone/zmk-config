@@ -139,19 +139,32 @@
 
             tapping-term-ms = <220>;
         };
+
+        tab: tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp TAB>;
+
+            tapping-term-ms = <220>;
+        };
+
+        shiftTab: shiftTab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFTTAB";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp LS(TAB)>;
+
+            tapping-term-ms = <220>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
+        esc {
+            bindings = <&kp ESCAPE>;
             key-positions = <13 14>;
-        };
-
-        shiftTab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <14 15>;
         };
     };
 
@@ -168,7 +181,7 @@
 
             bindings = <
 &kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                                      &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
-&kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                                       &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
+&kp TAB    &tab          &shiftTab    &kp E         &kp R           &kp T                                       &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
 &kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &all_search                                 &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT  &undo         &redo        &Copy         &Paste          &kp B        &kp LBKT             &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
                                       &kp LALT      &kp LGUI        &kp SPACE    &Convert_langauge    &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
