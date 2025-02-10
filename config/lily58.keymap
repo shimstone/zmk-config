@@ -41,9 +41,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
             quick-tap-ms = <75>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            retro-tap;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -56,9 +53,6 @@
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
             quick-tap-ms = <75>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            retro-tap;
         };
 
         hmlct: homerow_mods_left_ctrl {
@@ -83,9 +77,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <25 34 26 33 32>;
             quick-tap-ms = <75>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
-            retro-tap;
         };
 
         Copy: Copy {
