@@ -39,7 +39,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
             quick-tap-ms = <80>;
-            retro-tap;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -52,7 +51,6 @@
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
             quick-tap-ms = <80>;
-            retro-tap;
         };
 
         hmlct: homerow_mods_left_ctrl {
@@ -64,7 +62,6 @@
             tapping-term-ms = <150>;
             hold-trigger-key-positions = <25>;
             flavor = "balanced";
-            retro-tap;
         };
 
         hmo: homerow_mods {
@@ -77,7 +74,6 @@
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
             quick-tap-ms = <80>;
-            retro-tap;
         };
 
         Copy: Copy {
@@ -129,17 +125,17 @@
             compatible = "zmk,behavior-tap-dance";
             label = "UNDO";
             #binding-cells = <0>;
-            tapping-term-ms = <120>;
-            bindings = <&kp Z>, <&kp LG(Z)>;
+            tapping-term-ms = <150>;
+            bindings = <&kp Z>, <&kp LG(Z)>, <&kp Z>;
         };
 
         redo: redo {
             compatible = "zmk,behavior-tap-dance";
             label = "REDO";
             #binding-cells = <0>;
-            bindings = <&kp X>, <&kp LG(LS(Z))>;
+            bindings = <&kp X>, <&kp LG(LS(Z))>, <&kp X>;
 
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
         };
 
         tab: tab {
