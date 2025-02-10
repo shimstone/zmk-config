@@ -182,6 +182,16 @@
             bindings = <&sys_reset>;
             key-positions = <57 56>;
         };
+
+        close_window {
+            bindings = <&kp LG(W)>;
+            key-positions = <14 27>;
+        };
+
+        delete_line {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <27 56>;
+        };
     };
 
     keymap {
