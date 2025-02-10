@@ -47,10 +47,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <120>;
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
-            quick-tap-ms = <80>;
+            quick-tap-ms = <70>;
         };
 
         hmlct: homerow_mods_left_ctrl {
