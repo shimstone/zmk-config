@@ -25,7 +25,7 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <0>;
         };
 
         hmrs: homerow_mods_right_shift {
@@ -37,7 +37,7 @@
             tapping-term-ms = <140>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <0>;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -46,10 +46,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             hold-trigger-key-positions = <27>;
             flavor = "balanced";
-            quick-tap-ms = <75>;
+            quick-tap-ms = <0>;
         };
 
         hmlct: homerow_mods_left_ctrl {
@@ -70,10 +70,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34 26 33 32>;
-            quick-tap-ms = <75>;
+            quick-tap-ms = <0>;
         };
 
         Copy: Copy {
