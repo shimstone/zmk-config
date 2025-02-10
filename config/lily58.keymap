@@ -199,11 +199,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bootloader  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans             &trans             &trans            &trans     &studio_unlock
-&kp GRAVE    &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(20)                         &kp N6       &kp N7             &mmv MOVE_Y(-600)  &kp N9            &kp N0     &trans
-&kp F1       &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-20)                        &trans       &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &kp RIGHT  &trans
-&kp F7       &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS          &kp EQUAL          &kp LBKT          &kp RBKT   &kp BSLH
-                                                  &trans           &trans                &trans                &trans    &trans  &trans       &trans             &trans
+&bootloader  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans                     &trans             &trans             &trans            &trans     &studio_unlock
+&kp GRAVE    &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(20)                         &kp LG(LS(LEFT_BRACKET))   &kp N7             &mmv MOVE_Y(-600)  &kp N9            &kp N0     &trans
+&kp F1       &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-20)                        &kp LS(LG(RIGHT_BRACKET))  &mmv MOVE_X(-600)  &mmv MOVE_Y(600)   &mmv MOVE_X(600)  &kp RIGHT  &trans
+&kp F7       &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS                &kp MINUS          &kp EQUAL          &kp LBKT          &kp RBKT   &kp BSLH
+                                                  &trans           &trans                &trans                &trans    &trans  &trans                     &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
