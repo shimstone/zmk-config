@@ -25,10 +25,7 @@
             tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
-            hold-while-undecided;
             quick-tap-ms = <75>;
-            hold-while-undecided-linger;
-            retro-tap;
         };
 
         hmrs: homerow_mods_right_shift {
