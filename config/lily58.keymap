@@ -37,6 +37,7 @@
             tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
+            quick-tap-ms = <80>;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -123,7 +124,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "UNDO";
             #binding-cells = <0>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <120>;
             bindings = <&kp Z>, <&kp LG(Z)>;
         };
 
@@ -133,7 +134,7 @@
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp LG(LS(Z))>;
 
-            tapping-term-ms = <220>;
+            tapping-term-ms = <300>;
         };
 
         tab: tab {
@@ -225,11 +226,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans                     &trans          &trans          &trans           &trans     &studio_unlock
-&kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(20)                         &kp LG(LS(LEFT_BRACKET))   &kp N7          &mmv MOVE_UP    &kp N9           &kp N0     &trans
-&kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-20)                        &kp LS(LG(RIGHT_BRACKET))  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RIGHT  &trans
-&kp F7     &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS                &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
-                                                &trans           &trans                &trans                &trans    &trans  &trans                     &trans          &trans
+&bootloader  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans                     &trans          &trans          &trans           &trans     &studio_unlock
+&kp GRAVE    &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(20)                         &kp LG(LS(LEFT_BRACKET))   &kp N7          &mmv MOVE_UP    &kp N9           &kp N0     &trans
+&kp F1       &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-20)                        &kp LS(LG(RIGHT_BRACKET))  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RIGHT  &trans
+&kp F7       &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS                &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
+                                                  &trans           &trans                &trans                &trans    &trans  &trans                     &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -244,10 +245,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans     &trans     &trans    &trans    &trans
-&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F12                         &kp RIGHT_SHIFT  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET        &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &kp NUMBER_0  &num_f_1      &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans           &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans     &trans     &trans    &sys_reset  &bootloader
+&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F12                         &kp RIGHT_SHIFT  &kp F8     &kp F9     &kp F10   &kp F11     &kp F12
+&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET        &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR    &kp TILDE
+&trans      &kp NUMBER_0  &num_f_1      &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans           &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC    &kp PIPE
                                         &trans        &trans        &trans        &trans    &trans  &trans           &trans     &trans
             >;
 
