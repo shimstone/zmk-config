@@ -267,11 +267,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans     &trans     &trans    &sys_reset  &bootloader
-&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F12                         &kp RIGHT_SHIFT  &kp F8     &kp F9     &kp F10   &kp F11     &kp F12
-&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET        &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR    &kp TILDE
-&trans      &kp NUMBER_0  &num_f_1      &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans           &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC    &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans           &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans           &trans           &trans       &trans    &sys_reset  &bootloader
+&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F12                         &kp RIGHT_SHIFT  &kp LC(LS(TAB))  &kp LC(TAB)  &kp F10   &kp F11     &kp F12
+&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET        &kp AMPS         &kp ASTRK    &kp LPAR  &kp RPAR    &kp TILDE
+&trans      &kp NUMBER_0  &num_f_1      &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans           &kp MINUS        &kp PLUS     &kp LBRC  &kp RBRC    &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
