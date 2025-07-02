@@ -93,14 +93,6 @@
             bindings = <&kp O>, <&kp LG(LS(O))>;
             tapping-term-ms = <150>;
         };
-
-        ctrl_lang_switch: ctrl_language_switch {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_LANGUAGE_SWITCH";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp LC(SPACE)>;
-            tapping-term-ms = <150>;
-        };
     };
 
     keymap {
@@ -117,7 +109,7 @@
             bindings = <
 &kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                           &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
 &kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                            &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                         &kp MINUS
-&ctrl_lang_switch  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LC(SPACE)  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z         &kp X        &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
                                       &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
