@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600, increased for faster movement
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30   // default: 10, increased for faster scrolling
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -21,7 +21,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
         };
@@ -32,7 +32,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <110>;
+            tapping-term-ms = <95>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
         };
@@ -43,7 +43,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <110>;
             hold-trigger-key-positions = <27>;
         };
 
@@ -53,7 +53,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <110>;
             hold-trigger-key-positions = <25>;
         };
 
@@ -63,7 +63,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <120>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
         };
@@ -101,8 +101,8 @@
 
             bindings = <
 &trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans          &trans          &trans           &trans     &trans
-&kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(10)                         &kp N6       &kp N7          &mmv MOVE_Y(-300)    &kp N9           &kp N0     &trans
-&kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-10)                        &trans       &mmv MOVE_X(-300)  &mmv MOVE_Y(300)  &mmv MOVE_X(300)  &kp RIGHT  &trans
+&kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(50)                         &kp N6       &kp N7          &mmv MOVE_Y(-800)    &kp N9           &kp N0     &trans
+&kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-50)                        &trans       &mmv MOVE_X(-800)  &mmv MOVE_Y(800)  &mmv MOVE_X(800)  &kp RIGHT  &trans
 &kp F7     &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
                                                 &trans           &trans                &trans                &trans    &trans  &trans       &trans          &trans
             >;
