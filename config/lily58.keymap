@@ -4,14 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 40
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -19,13 +15,12 @@
         hmls: homerow_mods_left_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "homerow_mods_left_shift";
-            bindings = <&kp>, <&search>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
-            quick-tap-ms = <0>;
         };
 
         hmrs: homerow_mods_right_shift {
@@ -34,10 +29,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
+            tapping-term-ms = <140>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
-            quick-tap-ms = <0>;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -46,10 +40,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <180>;
             hold-trigger-key-positions = <27>;
-            flavor = "balanced";
-            quick-tap-ms = <0>;
         };
 
         hmlct: homerow_mods_left_ctrl {
@@ -60,8 +52,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             hold-trigger-key-positions = <25>;
-            flavor = "balanced";
-            quick-tap-ms = <0>;
         };
 
         hmo: homerow_mods {
@@ -70,168 +60,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <25 34 26 33 32>;
-            quick-tap-ms = <0>;
-        };
-
-        Copy: Copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "COPY";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&kp LG(C)>;
-
-            tapping-term-ms = <220>;
-        };
-
-        Paste: Paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LG(V)>;
-
-            tapping-term-ms = <220>;
-        };
-
-        Convert_langauge: Convert_langauge {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CONVERT_LANGAUGE";
-            #binding-cells = <0>;
-            bindings = <&mo 1>, <&kp LC(SPACE)>;
-
-            tapping-term-ms = <220>;
-        };
-
-        num_f_1: num_f_1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUM_F_1";
-            bindings = <&kp NUMBER_1>, <&kp F1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
-        all_search: all_search {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ALL_SEARCH";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp LS(LG(F))>;
-
-            tapping-term-ms = <220>;
-        };
-
-        undo: undo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UNDO";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp Z>, <&kp LG(Z)>, <&kp Z>;
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "REDO";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&kp LG(LS(Z))>, <&kp X>;
-
-            tapping-term-ms = <150>;
-        };
-
-        tab: tab {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAB";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp TAB>;
-
-            tapping-term-ms = <220>;
-        };
-
-        shiftTab: shiftTab {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTTAB";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp LS(TAB)>;
-
-            tapping-term-ms = <220>;
-        };
-
-        search: search {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEARCH";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LG(F)>;
-
-            tapping-term-ms = <220>;
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 14>;
-        };
-
-        left_bootloader {
-            bindings = <&bootloader>;
-            key-positions = <50 51 52>;
-        };
-
-        left_reset {
-            bindings = <&sys_reset>;
-            key-positions = <51 50>;
-        };
-
-        right_reset {
-            bindings = <&sys_reset>;
-            key-positions = <57 56>;
-        };
-
-        close_window {
-            bindings = <&kp LG(W)>;
-            key-positions = <14 27>;
-        };
-
-        delete_line {
-            bindings = <&kp LG(BACKSPACE)>;
-            key-positions = <27 56>;
-        };
-
-        undo {
-            bindings = <&kp LG(Z)>;
-            key-positions = <27 37>;
-        };
-
-        redo {
-            bindings = <&kp LG(LS(Z))>;
-            key-positions = <27 28 37>;
-        };
-
-        select_all {
-            bindings = <&kp LG(A)>;
-            key-positions = <25 26>;
-        };
-
-        new_tab {
-            bindings = <&kp LG(T)>;
-            key-positions = <27 17>;
-        };
-
-        fullScreen {
-            bindings = <&kp LG(LC(F))>;
-            key-positions = <28 29>;
-        };
-
-        command-line {
-            bindings = <&kp LG(L)>;
-            key-positions = <27 33>;
-        };
-
-        indent {
-            bindings = <&kp LC(I)>;
-            key-positions = <25 20>;
+            hold-trigger-key-positions = <25 34>;
         };
     };
 
@@ -247,11 +78,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                                      &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
-&kp TAB    &tab          &shiftTab    &kp E         &kp R           &kp T                                       &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
-&kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &all_search                                 &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z         &kp X        &Copy         &Paste          &kp B        &kp LBKT             &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
-                                      &kp LALT      &kp LGUI        &kp SPACE    &Convert_langauge    &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
+&kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                           &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
+&kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                            &kp Y      &kp U                &kp I                 &kp O             &kp P                         &kp MINUS
+&kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT  &kp Z         &kp X        &kp C         &kp V           &kp B      &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
+                                      &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -266,11 +97,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bootloader  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans                     &trans          &trans          &trans           &trans     &studio_unlock
-&kp GRAVE    &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(20)                         &kp LG(LS(LEFT_BRACKET))   &kp N7          &mmv MOVE_UP    &kp N9           &kp N0     &trans
-&kp F1       &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-20)                        &kp LS(LG(RIGHT_BRACKET))  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RIGHT  &trans
-&kp F7       &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS                &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
-                                                  &trans           &trans                &trans                &trans    &trans  &trans                     &trans          &trans
+&trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans          &trans          &trans           &trans     &trans
+&kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc SCRL_UP                            &kp N6       &kp N7          &mmv MOVE_UP    &kp N9           &kp N0     &trans
+&kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc SCRL_DOWN                          &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp RIGHT  &trans
+&kp F7     &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
+                                                &trans           &trans                &trans                &trans    &trans  &trans       &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -285,11 +116,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans                &trans           &trans       &trans    &sys_reset  &bootloader
-&kp F1      &kp F2        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp F12                         &kp LG(LS(NUMBER_4))  &kp LC(LS(TAB))  &kp LC(TAB)  &kp F10   &kp F11     &kp F12
-&kp GRAVE   &kp EXCL      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PRCNT                       &kp CARET             &kp AMPS         &kp ASTRK    &kp LPAR  &kp RPAR    &kp TILDE
-&trans      &kp NUMBER_0  &num_f_1      &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &trans                &kp MINUS        &kp PLUS     &kp LBRC  &kp RBRC    &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans                &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
+&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+                                                 &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
