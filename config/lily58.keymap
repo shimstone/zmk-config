@@ -21,9 +21,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <85>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            tapping-term-ms = <75>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <28>;
         };
 
@@ -33,9 +34,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <80>;
-            quick-tap-ms = <175>;
-            flavor = "balanced";
+            tapping-term-ms = <75>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <31>;
         };
 
@@ -46,6 +48,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <110>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <27>;
         };
 
@@ -56,6 +61,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <90>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <25>;
         };
 
@@ -66,7 +74,9 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <120>;
-            flavor = "balanced";
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
             hold-trigger-key-positions = <25 34>;
         };
 
