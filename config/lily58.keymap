@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // default: 600, increased for faster movement
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600, increased for faster movement
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30   // default: 10, increased for faster scrolling
 
 #include <behaviors.dtsi>
