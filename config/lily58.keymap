@@ -5,7 +5,7 @@
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 3000  // default: 600, maximum speed for fastest movement
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30   // default: 10, increased for faster scrolling
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20   // default: 10, increased for faster scrolling
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
