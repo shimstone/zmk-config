@@ -21,7 +21,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <28>;
         };
@@ -32,7 +32,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <31>;
         };
@@ -43,7 +43,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <27>;
         };
@@ -54,7 +54,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <25>;
         };
@@ -65,7 +65,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
         };
@@ -75,7 +75,7 @@
             label = "C_COPY";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LG(C)>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
         };
 
         v_paste: v_paste {
@@ -83,7 +83,7 @@
             label = "V_PASTE";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LG(V)>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
         };
 
         o_cmd_shift_o: o_cmd_shift_o {
@@ -91,17 +91,15 @@
             label = "O_CMD_SHIFT_O";
             #binding-cells = <0>;
             bindings = <&kp O>, <&kp LG(LS(O))>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
         };
-    };
 
-    combos {
-        compatible = "zmk,combos";
-
-        language_switch_combo {
-            bindings = <&kp LC(SPACE)>;
-            key-positions = <25 62>;
-            timeout-ms = <50>;
+        ctrl_lang_switch: ctrl_language_switch {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_LANGUAGE_SWITCH";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp LC(SPACE)>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -119,7 +117,7 @@
             bindings = <
 &kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                           &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
 &kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                            &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                         &kp MINUS
-&kp LCTRL  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
+&ctrl_lang_switch  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z         &kp X        &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
                                       &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
             >;
@@ -156,8 +154,8 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp LG(LA(LEFT_BRACKET))  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp LG(LA(RIGHT_BRACKET))  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
                                                  &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
             >;
