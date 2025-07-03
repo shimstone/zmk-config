@@ -54,7 +54,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <110>;
             flavor = "balanced";
             hold-trigger-key-positions = <25>;
         };
@@ -65,7 +65,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <25 34>;
         };
@@ -107,11 +107,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1        &kp N2       &kp N3        &kp N4          &kp N5                           &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                        &kp GRAVE
-&kp TAB    &kp Q         &kp W        &kp E         &kp R           &kp T                            &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                         &kp MINUS
-&kp LC(SPACE)  &hmo LCTRL A  &hmo LALT S  &hmlc LCMD D  &hmls LSHIFT F  &kp G                            &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmo RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z         &kp X        &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT  &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                      &kp RSHFT
-                                      &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2     &kp ENTER  &kp BSPC             &kp RGUI
+&kp ESC         &kp N1          &kp N2          &kp N3        &kp N4          &kp N5                            &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                           &kp GRAVE
+&kp TAB         &kp Q           &kp W           &kp E         &kp R           &kp T                             &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                            &kp MINUS
+&kp LC(SPACE)   &hmlct LCTRL A  &hmo LALT S     &hmlc LCMD D  &hmls LSHIFT F  &kp G                             &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmlct RIGHT_CONTROL SEMICOLON   &kp SQT
+&kp LSHFT       &kp Z           &kp X           &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT   &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                         &kp RSHFT
+                                                &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2      &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -126,11 +126,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                    &trans       &trans          &trans          &trans           &trans     &trans
-&kp GRAVE  &kp LC(UP_ARROW)  &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(50)                         &kp N6       &kp N7          &mmv MOVE_Y(-1500)    &kp N9           &kp N0     &trans
-&kp F1     &kp F2            &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-50)                        &trans       &mmv MOVE_X(-1500)  &mmv MOVE_Y(1500)  &mmv MOVE_X(1500)  &kp RIGHT  &trans
-&kp F7     &kp LC(LEFT)      &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
-                                                &trans           &trans                &trans                &trans    &trans  &trans       &kp DELETE       &trans
+&trans     &kp C_BRIGHTNESS_DEC     &kp C_MUTE         &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_BRIGHTNESS_INC                       &trans       &trans          &trans          &trans           &trans     &trans
+&kp GRAVE  &kp LC(UP_ARROW)         &mkp LCLK          &kp UP_ARROW     &mkp RCLK             &msc MOVE_Y(50)                         &kp N6       &kp N7          &mmv MOVE_Y(-1500)    &kp N9           &kp N0     &trans
+&kp F1     &kp F2                   &kp LEFT           &kp DOWN         &kp RIGHT             &msc MOVE_Y(-50)                        &trans       &mmv MOVE_X(-1500)  &mmv MOVE_Y(1500)  &mmv MOVE_X(1500)  &kp RIGHT  &trans
+&kp F7     &kp LC(LEFT)             &kp LC(RIGHT)      &kp LC(LG(F11))  &kp LC(LG(F12))       &kp F12               &trans    &trans  &kp KP_PLUS  &kp MINUS       &kp EQUAL       &kp LBKT         &kp RBKT   &kp BSLH
+                                                       &trans           &trans                &trans                &trans    &trans  &trans       &kp DELETE       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
