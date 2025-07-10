@@ -22,7 +22,7 @@
             tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         hmrs: homerow_mods_right_shift {
@@ -32,7 +32,7 @@
             tapping-term-ms = <140>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         hmlc: homerow_mods_left_cmd {
@@ -42,7 +42,7 @@
             tapping-term-ms = <180>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         hmlct: homerow_mods {
@@ -52,7 +52,7 @@
             tapping-term-ms = <160>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
 
@@ -63,7 +63,7 @@
             tapping-term-ms = <160>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         c_copy: c_copy {
