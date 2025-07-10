@@ -45,7 +45,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hmlct: homerow_mods {
+        hmlct: homerow_mods_left_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_OTHER";
             #binding-cells = <2>;
