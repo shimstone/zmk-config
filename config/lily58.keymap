@@ -17,57 +17,53 @@
     behaviors {
         hmls: homerow_mods_left_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "homerow_mods_left_shift";
-            bindings = <&kp>, <&kp>;
-
+            label = "HOMEROW_MODS_FOR_LEFT_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <28>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>, <&kp>;
         };
 
         hmrs: homerow_mods_right_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_SHIFT";
-            bindings = <&kp>, <&kp>;
-
+            label = "HOMEROW_MODS_FOR_RIGHT_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <31>;
+            tapping-term-ms = <140>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>, <&kp>;
         };
 
         hmlc: homerow_mods_left_cmd {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_CMD";
-            bindings = <&kp>, <&kp>;
-
+            label = "HOMEROW_MODS_FOR_LEFT_CMD";
             #binding-cells = <2>;
-            tapping-term-ms = <90>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <27>;
+            tapping-term-ms = <180>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>, <&kp>;
         };
 
-        hmlct: homerow_mods_left_ctrl {
+        hmlct: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_CTRL";
-            bindings = <&kp>, <&kp>;
-
+            label = "HOMEROW_MODS_FOR_OTHER";
             #binding-cells = <2>;
-            tapping-term-ms = <110>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <25>;
+            tapping-term-ms = <160>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>, <&kp>;
         };
+
 
         hmo: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            bindings = <&kp>, <&kp>;
-
+            label = "HOMEROW_MODS_FOR_OTHER";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <25 34>;
+            tapping-term-ms = <160>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>, <&kp>;
         };
 
         c_copy: c_copy {
