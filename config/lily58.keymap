@@ -89,6 +89,22 @@
             bindings = <&kp O>, <&kp LG(LS(O))>;
             tapping-term-ms = <150>;
         };
+
+        lshift_cmd_shift_o: lshift_cmd_shift_o {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LSHIFT_CMD_SHIFT_O";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp LG(LS(O))>;
+            tapping-term-ms = <200>;
+        };
+
+        tab_cmd_tab: tab_cmd_tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_CMD_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp LG(TAB)>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -104,9 +120,9 @@
 
             bindings = <
 &kp ESC         &kp N1          &kp N2          &kp N3        &kp N4          &kp N5                            &kp N6     &kp N7               &kp N8                &kp N9            &kp N0                           &kp GRAVE
-&kp TAB         &kp Q           &kp W           &kp E         &kp R           &kp T                             &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                            &kp MINUS
+&tab_cmd_tab    &kp Q           &kp W           &kp E         &kp R           &kp T                             &kp Y      &kp U                &kp I                 &o_cmd_shift_o    &kp P                            &kp MINUS
 &kp LC(SPACE)   &hmlct LCTRL A  &hmo LALT S     &hmlc LCMD D  &hmls LSHIFT F  &kp G                             &kp H      &hmrs RIGHT_SHIFT J  &hmo RIGHT_COMMAND K  &hmo RIGHT_ALT L  &hmlct RIGHT_CONTROL SEMICOLON   &kp SQT
-&kp LSHFT       &kp Z           &kp X           &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT   &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                         &kp RSHFT
+&lshift_cmd_shift_o  &kp Z           &kp X           &c_copy       &v_paste        &kp B      &kp LBKT    &kp RBKT   &kp N      &kp M                &kp COMMA             &kp DOT           &kp FSLH                         &kp RSHFT
                                                 &kp LALT      &kp LGUI        &kp SPACE  &mo 1       &mo 2      &kp ENTER  &kp BSPC             &kp RGUI
             >;
 
