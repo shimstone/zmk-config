@@ -110,10 +110,10 @@
     combos {
         compatible = "zmk,combos";
         
-        combo_ctrl_shift_f {
+        combo_cmd_shift_f {
             timeout-ms = <40>;
             key-positions = <27 28>; // D and F keys positions (corrected)
-            bindings = <&kp LC(LS(F))>;
+            bindings = <&kp LG(LS(F))>;
             layers = <0>;
         };
     };
