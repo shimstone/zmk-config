@@ -19,7 +19,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_LEFT_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -29,7 +29,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_RIGHT_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <140>;
+            tapping-term-ms = <120>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -39,7 +39,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_LEFT_CMD";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <160>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_FOR_OTHER";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <140>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
